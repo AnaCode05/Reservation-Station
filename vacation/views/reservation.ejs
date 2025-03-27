@@ -1,0 +1,67 @@
+<%- include('shared/htmlStart') -%>
+
+<h1 class="titleHeading">Reserve a Vacation Spot</h1>
+
+<form action="/reservationForm" method="post">
+    <fieldset>
+        <legend>Reservation Form</legend>
+
+        <div class="formInput">
+            <label for="fullName">Name:</label>
+            <input type="text" name="fullName" id="fullName">
+        </div>
+        <div class="formInput">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" name="phone" id="phone">
+        </div>
+        <div class="formInput">
+            <label for="province">Province or Territory:</label>
+            <select name="province" id="province">
+                <option value="AB">Alberta</option>
+                <option value="BC">British Columbia</option>
+                <option value="MB">Manitoba</option>
+                <option value="NB">New Brunswick</option>
+                <option value="NL">Newfoundland and Labrador</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="ON">Ontario</option>
+                <option value="PE">Prince Edward Island</option>
+                <option value="QC">Quebec</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="NT">Northwest Territories</option>
+                <option value="NU">Nunavut</option>
+                <option value="YT">Yukon Territory</option>
+            </select>
+        </div>
+        <div class="formInput">
+            <label for="nightNumber">Number of Nights Stay:</label>
+            <input type="number" name="nightNumber" id="nightNumber" min="1">
+        </div>
+        <div class="formInput">
+            <label for="vacationSpot">Vacation Spot:</label>
+            <select name="vacationSpot" id="vacationSpot">
+                <option value="Bright View">Bright View</option>
+                <option value="Sunny Vale">Sunny Vale</option>
+                <option value="Lakeside">Lakeside</option>
+                <option value="Lake Break">Lake Break</option>
+                <option value="Wiarton's Best">Wiarton's Best</option>
+                <option value="Martina's House">Martina's House</option>
+            </select>
+        </div>
+
+        <input type="submit" value="Reserve Vacation Spot">
+    </fieldset>
+</form>
+
+<div id="errorDiv">
+    <% if(typeof(errors) !== 'undefined') {
+        if (typeof(errors) === 'string'){ %>
+            <p><%= errors %></p>
+        <% }else{
+            for(var error of errors) { %>
+                <p><%= error.msg %></p>
+            <% }
+        }
+    } %>
+</div>
+
+<%- include('shared/htmlEnd') -%>

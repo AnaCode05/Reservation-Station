@@ -1,0 +1,34 @@
+<%- include('shared/htmlStart') -%>
+
+<h1 class="titleHeading">Login</h1>
+
+<form action="/loginForm" method="post">
+    <fieldset>
+        <legend>Login</legend>
+
+        <div class="formInput">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div class="formInput">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+        </div>
+
+        <input type="submit" value="Login">
+    </fieldset>
+</form>
+
+<div id="errorDiv">
+    <% if(typeof(errors) !== 'undefined') {
+        if (typeof(errors) === 'string'){ %>
+            <p><%= errors %></p>
+        <% }else{
+            for(var error of errors) { %>
+                <p><%= error.msg %></p>
+            <% }
+        }
+    } %>
+</div>
+
+<%- include('shared/htmlEnd') -%>

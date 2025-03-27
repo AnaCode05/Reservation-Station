@@ -1,0 +1,17 @@
+<nav>
+    <ul>
+        <!-- always visible in nav bar -->
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        
+        
+        <!-- buttons/links not visible unless logged in -->
+        <% if(userLoggedIn === true) { %>
+            <%- include('navHidden') -%>
+        <% } %>
+        <% if(userLoggedIn === false) { %>
+            <li><a href="/signup"><button id="buttonStyle" type="button">Sign Up</button></a></li>
+            <li><a href="/login"><button id="buttonStyle" type="button">Login</button></a></li>
+        <% } %>
+    </ul>
+</nav>

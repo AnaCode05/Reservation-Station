@@ -1,0 +1,155 @@
+/* Variables - colors, fonts, etc. */
+:root{
+    --colorDark: rgb(62, 29, 29);
+    --colorDark2: rgb(116, 44, 18);
+    --colorMedium: rgb(114, 68, 28);
+    --colorLight: rgb(244, 225, 210);
+    --colorLight2: white;
+    --mainFont: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --otherFont: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* General Styling */
+*{
+    font-family: var(--mainFont);
+}
+html{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: var(--colorLight);
+    color: var(--colorDark);
+    border: 3px solid var(--colorDark);
+    border-radius: 10px;
+}
+
+/* Header Styling */
+#headerHeading{
+    float: left;
+}
+#headerImage{
+    float: right;
+}
+
+/* Navigation bar Styling */
+nav{
+    clear: both;
+    position: sticky;
+    top: 0;
+    background-color: var(--colorDark);
+    text-align: center;
+    padding: 1rem;
+}
+nav ul{
+    padding-left: 0;
+}
+nav li{
+    list-style: none;
+    display: inline;
+    padding: 1rem;
+    font-size: large;
+    font-weight: bold;
+}
+nav a{
+    text-decoration: none;
+    color: var(--colorLight);
+}
+nav a:hover{
+    color: var(--colorLight2);
+    font-style: italic;
+}
+
+/* General Styling */
+main{
+    border: 2px solid var(--colorDark);
+    background-color: var(--colorLight2);
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 20px;
+}
+.titleHeading{
+    font-variant: small-caps;
+    text-align: center;
+    color: var(--colorDark2);
+}
+#imgDiv{
+    text-align: center;
+}
+
+/* Form Styling */
+.formInput{
+    margin: 1rem;
+}
+fieldset{
+    border: 3px solid var(--colorMedium);
+    padding: 1rem;
+    margin: 1rem;
+}
+legend{
+    background-color: var(--colorDark);
+    color: var(--colorLight2);
+    border-radius: 20px;
+    border: 3px solid var(--colorMedium);
+    font-weight: bold;
+    padding: 0.4rem 0.8rem;
+}
+input[type=submit]{
+    background-color: var(--colorDark);
+    color: var(--colorLight);
+    border: 3px solid var(--colorDark);
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    font-weight: bold;
+}
+input[type=submit]:hover{
+    background-color: var(--colorMedium);
+    color: var(--colorLight2);
+}
+
+/* Table Styling */
+.receipt{
+    border-collapse: collapse;
+    margin: auto;
+    text-align: center;
+    font-variant: small-caps;
+}
+.receipt *{
+    border: 3px solid var(--colorDark);
+    padding: 0.3rem;
+}
+.receipt th{
+    background-color: var(--colorDark);
+    color: var(--colorLight2);
+}
+.receipt a{
+    border: none;
+}
+
+/* Button Styling */
+#buttonStyle{
+    border: none;
+    color: var(--colorDark);
+    background-color: var(--colorLight);
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: medium;
+}
+#buttonStyle:hover{
+    color: var(--colorLight2);
+    background-color: var(--colorMedium);
+}
+
+/* Error Styling */
+#errorDiv{
+    color: red;
+}
+
+/* Footer Styling */
+footer{
+    color: var(--colorLight2);
+}
+footer nav{
+    padding: 0.5rem;
+}
+footer nav li{
+    font-size: medium;
+}

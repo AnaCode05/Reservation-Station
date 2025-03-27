@@ -1,0 +1,44 @@
+<%- include('shared/htmlStart') -%>
+
+<h1 class="titleHeading">All Reservations Through Reservation Station</h1>
+
+<table class="receipt">
+    <thead>
+        <tr>
+            <th hidden>ID</th>
+            <th>Full Name</th>
+            <th>Phone Number</th>
+            <th>Province</th>
+            <th>Number of Nights</th>
+            <th>Vacation Spot</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% if (typeof(reservations) !== 'undefined'){
+            for (var reservation of reservations){ %>
+                <tr>
+                    <td hidden><%= reservation._id %></td>
+                    <td><%= reservation.fullName %></td>
+                    <td><%= reservation.phone %></td>
+                    <td><%= reservation.province %></td>
+                    <td><%= reservation.nightNumber %></td>
+                    <td><%= reservation.vacationSpot %></td>
+                    <td>
+                        <a href="/editreservation/<%= reservation._id %>">
+                            <button id="buttonStyle" type="button">Edit</button>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/deletereservation/<%= reservation._id %>">
+                            <button id="buttonStyle" type="button">Delete</button>
+                        </a>
+                    </td>
+                </tr>
+            <% }
+        } %>
+    </tbody>
+</table>
+
+<%- include('shared/htmlEnd') -%>
