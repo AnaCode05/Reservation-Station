@@ -4,6 +4,7 @@ The JavaScript web application allows users to rent cottages, campsites, AirBNBs
 ## Front-End: 
 - `JavaScript`
 - `HTML`, `CSS`
+- `EJS`
 
 ## Back-End:
 - `MongoDB`
